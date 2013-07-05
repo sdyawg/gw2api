@@ -48,6 +48,10 @@ def get_world_names(lang="en"):
 def get_events(**args):
     """ Get list events based on filtering by world, map and event. """
     return _request("events.json", **args)
+    
+def get_guild_details(id):
+    """ Get guild information based on guild_id
+    return _request("guild_details.json", guild_id=id)
 
 def _request(json_location, **args):
     """ Makes a request on the Guild Wars 2 API."""
